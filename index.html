@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nazariy Buryak — Cybersecurity • Security Engineering • Cloud</title>
+
+  <meta property="og:title" content="Nazariy Buryak — Cybersecurity • Security Engineering • Cloud" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <canvas id="fx-canvas" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Nazariy Buryak</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#education">Education</a>
+        <a class="nav__link" href="#experience">Experience</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" href="Nazariy%20Buryak%20Technical%20Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+        <button class="btn btn--primary" id="copyEmailBtn" type="button" data-email="c00305614@setu.com">
+          Copy email
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <p class="eyebrow">
+            Cybersecurity student • Security Engineering • Cloud Security
+          </p>
+
+          <h1 class="hero__title">
+            Building secure systems from pipeline to production.
+          </h1>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact</a>
+            <a class="btn btn--ghost" href="https://github.com/K0NGR3SS" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/nazariy-buryak-778433350/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat card">
+              <p class="stat__label">Focus</p>
+              <p class="stat__value">Cybersecurity (Cloud Security + DevSecOps)</p>
+            </div>
+
+            <div class="stat card">
+              <p class="stat__label">Knowledge</p>
+              <p class="stat__value">Scripting for CyberSec • Networking • Cloud </p>
+            </div>
+          </div>
+        </div>
+        <div class="profile card reveal" aria-label="Profile photo">
+            <div class="profile__frame">
+              <img
+                class="profile__img"
+                src="assets/profile.jpg"
+                alt="Nazariy Buryak"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          
+            <div class="profile__meta">
+              <p class="profile__name">Nazariy Buryak</p>
+              <p class="profile__role">Age: 18 / Nationality: Ukrainain / Residence: Ireland</p>
+            </div>
+          </div>
+
+        <div class="hero__right">
+          <div class="terminal card" role="region" aria-label="Profile snapshot">
+            <div class="terminal__bar" aria-hidden="true">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="terminal__title">secure-profile.sh</span>
+            </div>
+
+            <pre class="terminal__body"><code>
+$ whoami
+Nazariy Buryak
+
+$ role
+Cybersecurity Student → Cloud Security / DevSecOps
+
+$ currently_learning
+- AWS Infrastructure Security
+- GCP fundamentals
+- Secure CI/CD patterns
+- Docker + Kubernetes basics
+- Threat modeling + hardening
+            </code></pre>
+          </div>
+
+          <div class="badge-row" aria-label="Quick links">
+            <a class="chip" href="#projects">Featured work</a>
+            <a class="chip" href="#skills">Skills matrix</a>
+            <a class="chip" href="#contact">Open to internships</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">About</h2>
+        </div>
+
+        <div class="grid-2">
+          <article class="card prose">
+            <h3>What I do</h3>
+            <p>
+              Blah blah blah
+            </p>
+            <ul>
+              <li>E</li>
+              <li>Bruh</li>
+              <li>lchzdhv</li>
+            </ul>
+          </article>
+
+          <aside class="card prose">
+            <h3>Certifications</h3>
+            <ul>
+              <li>Digital Cloud Training: <span class="muted">AWS Certified Solutions Architect Associate (SAA-C03) Course</span></li>
+              <li>TryHackMe: <span class="muted">DevSecOps Certificate</span></li>
+              <li>TryHackMe: <span class="muted">Security Engineer Certificate</span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Education</h2>
+        </div>
+
+        <div class="grid-2">
+          <article class="card prose reveal">
+            <h3>South East Technological University (SETU), Carlow</h3>
+            <p class="muted"><span class="k">Cybercrime &amp; IT Security</span> — 2nd Year</p>
+            <ul>
+              <li>Study Years: September 2024 - June 2027</li>
+            </ul>
+          </article>
+
+          <article class="card prose reveal">
+            <h3>Portlaoise College</h3>
+            <p class="muted"><span class="k">Leaving Certificate</span></p>
+            <ul>
+              <li>Study Years: September 2019 - May 2024</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Relevant Experience</h2>
+        </div>
+
+        <div class="grid-2">
+          <article class="card prose reveal">
+            <h3>Cloud Infrastructure & DevOps Engineer - Cohort</h3>
+            <p class="muted">September 2025 – Present • Carlow</p>
+            <ul>
+              <li>v</li>
+              <li>v</li>
+              <li>Tech: Linux / AWS / Terraform /</li>
+            </ul>
+          </article>
+
+          <article class="card prose reveal">
+            <h3>Summit Attendee - Amazon Web Services</h3>
+            <p class="muted">September 2025 – September 2025 • Zurich</p>
+            <ul>
+              <li>v</li>
+              <li>v</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Skills</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3 class="card__title">Soft Skills</h3>
+            <div class="chips">
+              <span class="chip chip--solid">Effective Communication</span>
+              <span class="chip chip--solid">Problem Solving</span>
+              <span class="chip chip--solid">Analytical Thinking</span>
+              <span class="chip chip--solid">Calm under pressure</span>
+              <span class="chip chip--solid">Event Participation</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Cloud Providers and Tools</h3>
+            <div class="chips">
+              <span class="chip chip--solid">AWS</span>
+              <span class="chip chip--solid">Docker</span>
+              <span class="chip chip--solid">Git</span>
+              <span class="chip chip--solid">SonarQube</span>
+              <span class="chip chip--solid">WireShark</span>
+              <span class="chip chip--solid">NMAP</span>
+              <span class="chip chip--solid">BurpSuite</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Programming Languages</h3>
+            <div class="chips">
+              <span class="chip chip--solid">Python</span>
+              <span class="chip chip--solid">Terraform</span>
+              <span class="chip chip--solid">HTML/CSS</span>
+              <span class="chip chip--solid">JavaScript</span>
+              <span class="chip chip--solid">Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Projects (More on GitHub)</h2>
+        </div>
+
+        <div class="projects">
+          <article class="project card reveal">
+            <div class="project__top">
+              <h3 class="project__title">Log_Analyer</h3>
+              <span class="project__tag">Security Analysis</span>
+            </div>
+            <ul class="project__bullets">
+              <li><span class="k">Description:</span> A Python tool that reads security logs line-by-line to detect brute-force login attempts, SQLmap-style SQL injection scans, and attack patterns by IP, time, frequency, generates statistical reports and charts</li>
+              <li><span class="k">Stack:</span> Python, JSON.</li>
+            </ul>
+            <div class="project__links">
+              <a class="link" href="https://github.com/K0NGR3SS/Log_Analyzer" target="_blank" rel="noopener">Repo Link</a>
+            </div>
+          </article>
+
+          <article class="project card reveal">
+            <div class="project__top">
+              <h3 class="project__title">Image-Detector-AWS</h3>
+              <span class="project__tag">Cloud</span>
+            </div>
+            <ul class="project__bullets">
+              <li><span class="k">Description:</span>Serverless image analysis system using AWS Lambda, S3, Rekognition, and DynamoDB. Automatically detects and labels objects in uploaded images.</li>
+              <li><span class="k">Stack:</span> AWS Lambda, S3, Rekognition, DynamoDB</li>
+            </ul>
+            <div class="project__links">
+              <a class="link" href="https://github.com/K0NGR3SS/Image-Detector-AWS" target="_blank" rel="noopener">Repo Link</a>
+            </div>
+          </article>
+
+          <article class="project card reveal">
+            <div class="project__top">
+              <h3 class="project__title">AWS-IAM-Security-Intern-Access-Control</h3>
+              <span class="project__tag">Cloud</span>
+            </div>
+            <ul class="project__bullets">
+              <li><span class="k">Description:</span>
+                Restricting intern access so they can manage only development EC2 instances while keeping production locked down, using custom JSON policies and tag-based permissions.</li>
+              <li><span class="k">Stack:</span> AWS EC2, IAM, JSON Permissions</li>
+            </ul>
+            <div class="project__links">
+              <a class="link" href="https://github.com/K0NGR3SS/Image-Detector-AWS" target="_blank" rel="noopener">Repo Link</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Contact</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card prose">
+            <h3>Links (Just press)</h3>
+            <ul>
+              <li>Email: <a class="link" href="mailto:c00305614@setu.com">Just email</a></li>
+              <li>GitHub: <a class="link" href="https://github.com/K0NGR3SS" target="_blank" rel="noopener">Definetly not the best GitHub page that you have ever seen</a></li>
+              <li>LinkedIn: <a class="link" href="https://www.linkedin.com/in/nazariy-buryak-778433350/" target="_blank" rel="noopener">Best LinkedIn page that you have ever seen</a></li>
+            </ul>
+            <p class="muted small">
+              Optional: add a Calendly link or a simple contact form later.
+            </p>
+          </div>
+
+          <div class="card prose">
+            <h3>Status</h3>
+            <ul>
+              <li>Open to: internships / grad roles</li>
+              <li>Location: Ireland / Remote-friendly</li>
+              <li>Interests: Cloud Security Engineer, Solutions Architect, Security Engineer</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p class="muted small">© <span id="year"></span> Nazariy Buryak.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
