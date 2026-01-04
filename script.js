@@ -1,4 +1,3 @@
-// ---------- small helpers ----------
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
@@ -20,27 +19,64 @@ if (copyBtn) {
   });
 }
 
+// Bottom nav scroll effect
+const bottomNav = $(".bottom-nav");
+let ticking = false;
+
+function updateNavbar() {
+  const currentScroll = window.scrollY;
+  
+  if (currentScroll > 100) {
+    bottomNav.classList.add("scrolled");
+  } else {
+    bottomNav.classList.remove("scrolled");
+  }
+  
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateNavbar);
+    ticking = true;
+  }
+}, { passive: true });
+
 // Active nav link (based on scroll)
-const navLinks = $$(".nav__link");
+const navLinks = $$(".bottom-nav__link");
 const sections = navLinks
   .map(a => $(a.getAttribute("href")))
   .filter(Boolean);
 
+let activeUpdateTicking = false;
+
 const setActive = () => {
-  const y = window.scrollY + 120;
+  const y = window.scrollY + 150;
   let activeId = "home";
 
-  for (const sec of sections) {
-    if (sec.offsetTop <= y) activeId = sec.id;
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const sec = sections[i];
+    if (sec.offsetTop <= y) {
+      activeId = sec.id;
+      break;
+    }
   }
 
   navLinks.forEach(a => {
     const id = a.getAttribute("href").replace("#", "");
     a.classList.toggle("is-active", id === activeId);
   });
+  
+  activeUpdateTicking = false;
 };
 
-window.addEventListener("scroll", setActive, { passive: true });
+window.addEventListener("scroll", () => {
+  if (!activeUpdateTicking) {
+    window.requestAnimationFrame(setActive);
+    activeUpdateTicking = true;
+  }
+}, { passive: true });
+
 setActive();
 
 // Reveal on scroll
@@ -57,7 +93,6 @@ if (!prefersReduced) {
   $$(".reveal").forEach(el => el.classList.add("is-visible"));
 }
 
-// ---------- Canvas background: subtle cyber particle network ----------
 const canvas = $("#fx-canvas");
 const ctx = canvas.getContext("2d", { alpha: true });
 
@@ -96,8 +131,8 @@ function draw() {
   ctx.clearRect(0, 0, w, h);
 
   const grad = ctx.createRadialGradient(w * 0.5, h * 0.15, 80, w * 0.5, h * 0.5, Math.max(w, h) * 0.8);
-  grad.addColorStop(0, "rgba(0,245,212,0.045)");
-  grad.addColorStop(0.4, "rgba(0,163,255,0.030)");
+  grad.addColorStop(0, "rgba(255,255,255,0.025)");
+  grad.addColorStop(0.4, "rgba(255,255,255,0.015)");
   grad.addColorStop(1, "rgba(0,0,0,0)");
   ctx.fillStyle = grad;
   ctx.fillRect(0, 0, w, h);
@@ -126,7 +161,7 @@ function draw() {
 
       if (dist < maxDist) {
         const t = 1 - dist / maxDist;
-        ctx.strokeStyle = `rgba(0,245,212,${0.06 * t})`;
+        ctx.strokeStyle = `rgba(255,255,255,${0.04 * t})`;
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
