@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nazariy Buryak | Cybersecurity Portfolio</title>
+    <title>Nazariy Buryak Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
@@ -50,7 +50,6 @@
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero__content-wide reveal">
-                    <p class="eyebrow">CYBERSECURITY PROFESSIONAL</p>
                     <h1 class="hero__title">
                         Building Secure<br/>
                         <span class="gradient-text">Infrastructure</span><br/>
@@ -67,27 +66,11 @@
             </div>
         </section>
 
+        <!-- About: single big terminal with photo + info -->
         <section id="about" class="section section--flow">
             <div class="container">
                 <h2 class="section__title reveal">About Me</h2>
-
                 <div class="flow-content reveal">
-                    <div class="flow-block">
-                        <div class="profile-section">
-                            <div class="profile-image-wrapper">
-                                <img src="image.png" alt="Nazariy Buryak" class="profile-image">
-                                <div class="profile-image-border"></div>
-                            </div>
-                            <div class="profile-info">
-                                <h3 class="profile-name">Nazariy Buryak</h3>
-                                <p class="profile-title">18 Years Old</p>
-                                <p class="profile-title">Ukrainian</p>
-                                <p class="profile-title">Cybersecurity Student</p>
-                                <p class="profile-location">📍 Portlaoise, Ireland</p>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="flow-block">
                         <div class="terminal-flow">
                             <div class="terminal__bar">
@@ -96,27 +79,41 @@
                                 <span class="dot dot--green"></span>
                                 <span class="terminal__title">about_me.sh</span>
                             </div>
-                            <pre class="terminal__body">$ whoami
+                            <div class="terminal__body terminal__body--about">
+                                <div class="terminal-about-layout">
+                                    <div class="terminal-about-photo">
+                                        <div class="profile-image-wrapper">
+                                            <img src="image.png" alt="Nazariy Buryak" class="profile-image">
+                                            <div class="profile-image-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="terminal-about-text">
+<pre>$ whoami
 <span class="text-accent">Nazariy Buryak</span>
 
-$ role
-Cybersecurity Student → Cloud Security / DevSecOps
+$ age
+18 Years Old
 
-$ currently_learning
-- AWS Infrastructure Security
+$ role
+Cybersecurity Student &gt; Cloud Security / DevSecOps
+
+$ location
+Portlaoise, Ireland
+
+$ studying_at
+South East Technological University, Carlow
+
+$ focus
+- AWS infrastructure security
 - GCP fundamentals
 - Secure CI/CD patterns
 - Docker + Kubernetes basics
-- Threat modeling + hardening</pre>
+- Threat modeling &amp; hardening
+</pre>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="flow-content reveal" style="margin-top: 32px;">
-                    <div class="flow-block">
-                        <p>
-                          I am a cybersecurity student focused on cloud security, currently deepening my knowledge of AWS security architecture, identity and access management, and securing workloads in containerized environments. I am especially interested in learning how to design defense-in-depth for cloud-native applications, implement least-privilege access at scale, and integrate security controls into modern DevSecOps practices
-                        </p>
                     </div>
                 </div>
             </div>
@@ -126,30 +123,43 @@ $ currently_learning
             <div class="container">
                 <h2 class="section__title reveal">Relevant Experience</h2>
                 <div class="experience-flow reveal">
+
                     <div class="experience-item">
                         <div class="experience__header">
-                            <h3>Cohort</h3>
-                            <span class="experience__date">Carlow: September 2025 - Present</span>
+                            <div class="experience__company">
+                                <img src="cohort-logo.png" alt="Cohort logo" class="experience-logo">
+                                <div>
+                                    <h3>Cohort</h3>
+                                    <span class="experience__date">Carlow: September 2025 - Present</span>
+                                </div>
+                            </div>
                         </div>
-                        <p class="experience__role">Cloud Infrastructure & DevOps Engineer</p>
+                        <p class="experience__role">Cloud Infrastructure &amp; DevOps Engineer</p>
                         <ul class="experience__bullets">
-                            <li>Designing secure, scalable AWS cloud infrastructure encompassing networking, databases, SSL/TLS certificates, routing, caching, and containerized services</li>
-                            <li>Working on automating container image builds and deployment using Dockerfiles</li>
+                            <li>Designing secure, scalable AWS cloud infrastructure encompassing networking, databases, SSL/TLS certificates, routing, caching, and containerized services.</li>
+                            <li>Working on automating container image builds and deployment using Dockerfiles.</li>
                         </ul>
                     </div>
+
                     <div class="experience-item">
                         <div class="experience__header">
-                            <h3>Amazon Web Services</h3>
-                            <span class="experience__date">Zurich: September 2025</span>
+                            <div class="experience__company">
+                                <img src="aws-logo.png" alt="Amazon Web Services logo" class="experience-logo">
+                                <div>
+                                    <h3>Amazon Web Services</h3>
+                                    <span class="experience__date">Zurich: September 2025</span>
+                                </div>
+                            </div>
                         </div>
                         <p class="experience__role">Summit Attendee</p>
                         <ul class="experience__bullets">
-                            <li>Learned how to secure systems and use safety protocols for autonomous agents</li>
-                            <li>Studied identity security and how it connects with Kubernetes and CI/CD pipelines</li>
-                            <li>Helped design global network setups using AWS services</li>
-                            <li>Took part in CTF challenges and card games to improve cybersecurity skills and explore new attack and defense methods</li>
+                            <li>Learned how to secure systems and use safety protocols for autonomous agents.</li>
+                            <li>Studied identity security and how it connects with Kubernetes and CI/CD pipelines.</li>
+                            <li>Helped design global network setups using AWS services.</li>
+                            <li>Took part in CTF challenges and card games to improve cybersecurity skills and explore new attack and defense methods.</li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -158,7 +168,7 @@ $ currently_learning
             <div class="container">
                 <h2 class="section__title reveal">Technical Skills</h2>
                 <div class="flow-content reveal">
-        
+
                     <div class="flow-block">
                         <h3>Programming Languages</h3>
                         <div class="chips">
@@ -188,7 +198,7 @@ $ currently_learning
                             </span>
                         </div>
                     </div>
-        
+
                     <div class="flow-block">
                         <h3>Cloud & DevOps</h3>
                         <div class="chips">
@@ -218,7 +228,7 @@ $ currently_learning
                             </span>
                         </div>
                     </div>
-        
+
                     <div class="flow-block">
                         <h3>Systems</h3>
                         <div class="chips">
@@ -236,7 +246,7 @@ $ currently_learning
                             </span>
                         </div>
                     </div>
-        
+
                     <div class="flow-block">
                         <h3>In Progress...</h3>
                         <div class="chips">
@@ -263,7 +273,7 @@ $ currently_learning
                         </div>
                     </div>
                 </div>
-        
+
                 <h2 class="section__title reveal" style="margin-top: 80px;">Soft Skills</h2>
                 <div class="soft-skills-grid reveal">
                     <div class="soft-skill">
@@ -296,70 +306,100 @@ $ currently_learning
 
         <section id="projects" class="section section--flow">
             <div class="container">
-                <h2 class="section__title reveal">Featured Projects</h2>
+                <h2 class="section__title reveal">Projects (More on GitHub)</h2>
+        
                 <div class="projects-flow">
-                    <div class="project-flow reveal">
+                    <article class="project-flow project card reveal">
                         <div class="project__top">
-                            <h3 class="project__title">Network Recon Tool</h3>
-                            <span class="project__tag">Security</span>
+                            <h3 class="project__title">Log_Analyer</h3>
+                            <span class="project__tag">Security Analysis</span>
                         </div>
-                        <p class="project__desc">Advanced network reconnaissance and scanning utility</p>
                         <ul class="project__bullets">
-                            <li>Port scanning and service detection</li>
-                            <li>SSL/TLS certificate analysis</li>
-                            <li>Export to JSON/CSV formats</li>
+                            <li>
+                                <span class="k">Description:</span>
+                                A Python tool that reads security logs line-by-line to detect brute-force login attempts, SQLmap-style SQL injection scans, and attack patterns by IP, time, and frequency, generating statistical reports and charts.
+                            </li>
+                            <li>
+                                <span class="k">Stack:</span>
+                                Python, JSON.
+                            </li>
                         </ul>
                         <div class="project__links">
-                            <a href="#" class="link">View Code →</a>
+                            <a class="link" href="https://github.com/K0NGR3SS/Log_Analyzer" target="_blank" rel="noopener">
+                                Repo Link
+                            </a>
                         </div>
-                    </div>
-                    <div class="project-flow reveal">
+                    </article>
+        
+                    <article class="project-flow project card reveal">
                         <div class="project__top">
-                            <h3 class="project__title">System Hardening Scripts</h3>
-                            <span class="project__tag">Automation</span>
+                            <h3 class="project__title">Image-Detector-AWS</h3>
+                            <span class="project__tag">Cloud</span>
                         </div>
-                        <p class="project__desc">Collection of automation scripts for server configuration</p>
                         <ul class="project__bullets">
-                            <li>Automated security auditing</li>
-                            <li>Service configuration management</li>
-                            <li>Log monitoring and alerting</li>
+                            <li>
+                                <span class="k">Description:</span>
+                                Serverless image analysis system using AWS Lambda, S3, Rekognition, and DynamoDB that automatically detects and labels objects in uploaded images.
+                            </li>
+                            <li>
+                                <span class="k">Stack:</span>
+                                AWS Lambda, S3, Rekognition, DynamoDB.
+                            </li>
                         </ul>
                         <div class="project__links">
-                            <a href="#" class="link">View Code →</a>
+                            <a class="link" href="https://github.com/K0NGR3SS/Image-Detector-AWS" target="_blank" rel="noopener">
+                                Repo Link
+                            </a>
                         </div>
-                    </div>
-                    <div class="project-flow project--placeholder reveal">
+                    </article>
+        
+                    <article class="project-flow project card reveal">
                         <div class="project__top">
-                            <h3 class="project__title muted">More Coming Soon</h3>
+                            <h3 class="project__title">AWS-IAM-Security-Intern-Access-Control</h3>
+                            <span class="project__tag">Cloud</span>
                         </div>
-                        <p class="project__desc muted">Working on additional security tools and cloud infrastructure projects.</p>
-                    </div>
+                        <ul class="project__bullets">
+                            <li>
+                                <span class="k">Description:</span>
+                                Restricts intern access so they can manage only development EC2 instances while keeping production locked down, using custom JSON policies and tag-based permissions.
+                            </li>
+                            <li>
+                                <span class="k">Stack:</span>
+                                AWS EC2, IAM, JSON permissions.
+                            </li>
+                        </ul>
+                        <div class="project__links">
+                            <a class="link" href="https://github.com/K0NGR3SS/Image-Detector-AWS" target="_blank" rel="noopener">
+                                Repo Link
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
-
+        
         <section id="education" class="section section--flow">
             <div class="container">
                 <h2 class="section__title reveal">Education</h2>
                 <div class="flow-content reveal">
-        
+
                     <div class="flow-block education-item">
                         <div class="education-header">
                             <img src="setu-logo.png" alt="South East Technological University logo" class="education-logo">
                             <div>
-                                <h3>Ordinary BCs Cybercrime & IT Security</h3>
+                                <h3>Ordinary BCs Cybercrime &amp; IT Security</h3>
                                 <p class="muted">
                                     September 2024 – Present • South East Technological University, Carlow
                                 </p>
                             </div>
                         </div>
                         <ul class="education-details">
-                            <li>Graduating in August 2027</li>
-                            <li>Learning security scripting, networking and web security</li>
-                            <li>Developing skills in security automation, security analytics and hardening</li>
+                            <li>Graduating in August 2027.</li>
+                            <li>Learning security scripting, networking and web security.</li>
+                            <li>Developing skills in security automation, security analytics and hardening.</li>
                         </ul>
                     </div>
-        
+
                     <div class="flow-block education-item">
                         <div class="education-header">
                             <img src="portlaoise-college-logo.png" alt="Portlaoise College logo" class="education-logo">
@@ -371,29 +411,67 @@ $ currently_learning
                             </div>
                         </div>
                         <ul class="education-details">
-                            <li>Strong foundation in STEM subjects supporting cybersecurity and IT studies</li>
-                            <li>Active participation in technology-focused classes</li>
+                            <li>Strong foundation in STEM subjects supporting cybersecurity and IT studies.</li>
+                            <li>Active participation in technology-focused classes.</li>
                         </ul>
                     </div>
-        
+
+                </div>
+
+                <h3 class="section__title reveal" style="margin-top: 40px;">Certifications</h3>
+                <div class="flow-content reveal">
+                    <div class="flow-block">
+                        <h3>TryHackMe</h3>
+                        <ul class="education-details">
+                            <li><strong>DevSecOps Certificate</strong> — issued May 2025.</li>
+                            <li><strong>Security Engineer Certificate</strong> — issued May 2025.</li>
+                        </ul>
+                    </div>
+                    <div class="flow-block">
+                        <h3>Digital Cloud Training</h3>
+                        <ul class="education-details">
+                            <li><strong>AWS Certified Solutions Architect – Associate Course</strong> — issued August 2025.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flow-content reveal" style="margin-top: 24px;">
+                    <div class="flow-block">
+                        <p class="muted">
+                            My learning paths, and certifications can be found on my
+                            <a href="https://linktr.ee/nazarbur21" target="_blank" rel="noopener noreferrer">
+                                Linktree
+                            </a>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
-        
 
         <section id="contact" class="section section--flow">
             <div class="container">
                 <h2 class="section__title reveal">Get In Touch</h2>
                 <div class="flow-content reveal">
-                    <p class="contact-text">Interested in collaboration, internships, or any question? Feel free to reach out!</p>
+                    <p class="contact-text">
+                        Interested in collaboration, internships, or any question? Feel free to reach out!
+                    </p>
                     <div class="hero__cta">
-                        <button id="copyEmailBtn" data-email="c00305614@setu.ie" class="btn btn--primary">Copy Email</button>
-                        <a href="https://github.com/K0NGR3SS" class="btn btn--primary">GitHub</a>
-                        <a href="https://www.linkedin.com/in/nazariy-buryak-778433350/" class="btn btn--primary">LinkedIn</a>
+                        <button id="copyEmailBtn" data-email="c00305614@setu.ie" class="btn btn--primary">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Copy Email</span>
+                        </button>
+                        <a href="https://github.com/K0NGR3SS" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nazariy-buryak-778433350/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>    
     </main>
 
     <footer class="footer">
@@ -405,5 +483,45 @@ $ currently_learning
     </footer>
 
     <script src="script.js"></script>
+
+    <style>
+      .terminal__body--about {
+        padding: 16px 20px;
+      }
+
+      .terminal-about-layout {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .terminal-about-photo .profile-image-wrapper {
+        position: relative;
+        width: 120px;
+        height: 120px;
+      }
+
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 999px;
+      }
+
+      .profile-image-border {
+        position: absolute;
+        inset: -3px;
+        border-radius: 999px;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .terminal-about-text pre {
+        margin: 0;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+    </style>
 </body>
 </html>

@@ -678,6 +678,18 @@ main {
   margin: 10px 0;
 }
 
+.experience__company {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.experience-logo {
+  width: 40px;
+  height: auto;
+  border-radius: 4px; /* optional */
+}
+
 .soft-skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -945,6 +957,12 @@ main {
       flex-direction: column;
       align-items: flex-start;
   }
+}
+
+.hero__cta .btn i {
+  margin-right: 8px;
+  font-size: 1rem;
+  vertical-align: middle;
 }
 
 @media (prefers-reduced-motion: reduce) {
