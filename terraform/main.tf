@@ -13,8 +13,6 @@ module "static_website" {
     aws.us-east-1 = aws.us-east-1 #us-east-1 for ACM/CloudFront
   }
 
-  # CHANGE THIS to your real domain; must already have a public hosted zone
-  # in Route53 in this AWS account, e.g. example.com. [web:5]
   domain_name = "cybernazar.com"
 
   # Sensible defaults; tweak if you want
