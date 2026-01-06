@@ -13,7 +13,7 @@ output "s3_bucket_id" {
   value       = module.static_website.s3_bucket_id
 }
 
-output "acm_certificate_id" {
-  description = "ACM certificate ID used by CloudFront"
-  value       = module.static_website.acm_certificate_id
-}
+#output "acm_certificate_id" {
+#  description = "ACM certificate ID used by CloudFront"
+#  value       = module.static_website.acm_certificate_id
+#}
