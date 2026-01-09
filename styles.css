@@ -237,9 +237,10 @@ main {
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   width: min(1160px, calc(100% - 48px));
   border: 1px solid rgba(255,255,255,0.06);
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bottom-nav:hover {
@@ -687,7 +688,7 @@ main {
 .experience-logo {
   width: 40px;
   height: auto;
-  border-radius: 4px; /* optional */
+  border-radius: 4px;
 }
 
 .soft-skills-grid {
@@ -858,7 +859,7 @@ main {
 .education-logo {
   width: 48px;
   height: auto;
-  border-radius: 4px; /* optional, remove if you want original shape */
+  border-radius: 4px;
 }
 
 .education-details {
@@ -930,8 +931,11 @@ main {
   }
   
   .bottom-nav.scrolled {
-      left: 2%;
-      right: 2%;
+      width: calc(100% - 32px);
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       bottom: 10px;
   }
   
