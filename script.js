@@ -79,6 +79,26 @@ window.addEventListener("scroll", () => {
 
 setActive();
 
+// Skills tabs
+const skillsTabs = $$(".skills-tab");
+const skillsPanels = $$(".skills-panel");
+
+skillsTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const target = tab.getAttribute("data-tab");
+
+    skillsTabs.forEach(t => t.classList.remove("is-active"));
+    tab.classList.add("is-active");
+
+    skillsPanels.forEach(p => {
+      p.classList.remove("is-active");
+      if (p.id === `panel-${target}`) {
+        p.classList.add("is-active");
+      }
+    });
+  });
+});
+
 // Reveal on scroll
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 if (!prefersReduced) {
@@ -89,8 +109,12 @@ if (!prefersReduced) {
   }, { threshold: 0.12 });
 
   $$(".reveal").forEach(el => io.observe(el));
+  $$(".experience-flow").forEach(el => io.observe(el));
+  $$(".projects-grid").forEach(el => io.observe(el));
 } else {
   $$(".reveal").forEach(el => el.classList.add("is-visible"));
+  $$(".experience-flow").forEach(el => el.classList.add("is-visible"));
+  $$(".projects-grid").forEach(el => el.classList.add("is-visible"));
 }
 
 const canvas = $("#fx-canvas");
@@ -186,4 +210,15 @@ if (!prefersReduced) {
 window.addEventListener("resize", () => {
   resize();
   init();
+});
+
+// Project card glow tracking
+$$(".project-card").forEach(card => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    card.style.setProperty("--mouse-x", x + "%");
+    card.style.setProperty("--mouse-y", y + "%");
+  });
 });
