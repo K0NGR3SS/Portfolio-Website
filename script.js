@@ -155,8 +155,8 @@ function draw() {
   ctx.clearRect(0, 0, w, h);
 
   const grad = ctx.createRadialGradient(w * 0.5, h * 0.15, 80, w * 0.5, h * 0.5, Math.max(w, h) * 0.8);
-  grad.addColorStop(0, "rgba(255,255,255,0.025)");
-  grad.addColorStop(0.4, "rgba(255,255,255,0.015)");
+  grad.addColorStop(0, "rgba(0,255,136,0.015)");
+  grad.addColorStop(0.4, "rgba(0,212,255,0.008)");
   grad.addColorStop(1, "rgba(0,0,0,0)");
   ctx.fillStyle = grad;
   ctx.fillRect(0, 0, w, h);
@@ -172,7 +172,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255,255,255,0.08)";
+    ctx.fillStyle = "rgba(0,255,136,0.06)";
     ctx.fill();
   }
 
@@ -185,7 +185,7 @@ function draw() {
 
       if (dist < maxDist) {
         const t = 1 - dist / maxDist;
-        ctx.strokeStyle = `rgba(255,255,255,${0.04 * t})`;
+        ctx.strokeStyle = `rgba(0,255,136,${0.03 * t})`;
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
@@ -222,3 +222,50 @@ $$(".project-card").forEach(card => {
     card.style.setProperty("--mouse-y", y + "%");
   });
 });
+
+// ── Matrix digital rain ──────────────────────────────────────
+(function matrixRain() {
+  const mc = document.querySelector("#matrix-canvas");
+  if (!mc) return;
+  const mctx = mc.getContext("2d");
+
+  const chars = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF";
+  const fontSize = 14;
+  let columns, drops;
+
+  function matrixResize() {
+    mc.width = window.innerWidth;
+    mc.height = window.innerHeight;
+    columns = Math.floor(mc.width / fontSize);
+    drops = new Array(columns).fill(1).map(() => Math.random() * -100 | 0);
+  }
+
+  function matrixDraw() {
+    mctx.fillStyle = "rgba(2, 2, 4, 0.12)";
+    mctx.fillRect(0, 0, mc.width, mc.height);
+
+    mctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < columns; i++) {
+      const ch = chars[Math.random() * chars.length | 0];
+      const x = i * fontSize;
+      const y = drops[i] * fontSize;
+
+      mctx.fillStyle = "#00ff88";
+      mctx.globalAlpha = 0.4 + Math.random() * 0.6;
+      mctx.fillText(ch, x, y);
+      mctx.globalAlpha = 1;
+
+      if (y > mc.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+
+    requestAnimationFrame(matrixDraw);
+  }
+
+  matrixResize();
+  matrixDraw();
+  window.addEventListener("resize", matrixResize);
+})();
